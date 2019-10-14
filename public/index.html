@@ -6,19 +6,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <title>Afirma Net</title>
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/font-awesome.css">
   <link rel="stylesheet" href="./css/styles.css">
 
-  <title>Hello, world!</title>
+  <link rel="import" slot="agendas"   target="pills-content"  href="./pages/agendas.html">
+  <link rel="import" slot="apps"      target="pills-content"  href="./pages/apps.html">
+  <link rel="import" slot="dashboard" target="pills-content"  href="./pages/dashboard.html">
+  <link rel="import" slot="logs"      target="pills-content"  href="./pages/logs.html">
+  <link rel="import" slot="messages"  target="pills-content"  href="./pages/messages.html">
+  <link rel="import" slot="profiles"  target="pills-content"  href="./pages/profiles.html">
+  <link rel="import" slot="users"     target="pills-content"  href="./pages/users.html">
+  <link rel="import" slot="menu"      target="menu-le"        href="./components/menu.html">
+  <link rel="import" slot="footer"    target="footer-bp"      href="./components/footer.html">
 </head>
 
 <body>
   <!-- Header Dados de apresentação da tela e o menu de comunícação direta para o usuário -->
   <header class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary rounded">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-le">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -33,209 +43,22 @@
 
   <main class="container-fluid">
     <div class="row ml-0 my-2">
-      <!-- Menu lateral esquerdo -->
-      <div class="col-3 col-md-2 bg-gradient-light text-center rounded collapse navbar-collapse d-md-block" id="navbarSite">
-        <ul class="nav nav-pills flex-column" id="menu-lateral-esquerdo" role="list">
-          <li class="nav-item">
-            <a href="#tab-agendas" class="btn" id="item-mls-agendas" data-toggle="pill">
-              <i class="fa fa-calendar  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span class="d-none d-md-block">Agendas</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#tab-messages" class="btn" id="item-mls-messages" data-toggle="pill">
-              <i class="fa fa-comments mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span class="d-none d-md-block">Messages</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#tab-dashboard" class="btn active" id="item-mls-dashboard" data-toggle="pill">
-              <i class="fa fa-bar-chart mx-1 my-1" style="font-size:24px;" aria-hidden="true"> </i>
-              <label class="d-none d-md-block">Dashboard</label>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#tab-apps" class="btn" id="item-mls-apps" data-toggle="pill">
-              <i class="fa fa-microchip  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span class="d-none d-md-block">Apps</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#tab-profiles" class="btn" id="item-mls-profiles" data-toggle="pill">
-              <i class="fa fa-id-card-o  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span class="d-none d-md-block">Profiles</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#tab-users" class="btn" id="item-mls-users" data-toggle="pill">
-              <i class="fa fa-users  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span class="d-none d-md-block">Users</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#tab-logs" class="btn" id="item-mls-logs" data-toggle="pill">
-              <i class="fa fa-tasks mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span class="d-none d-md-block">Logs</span>
-            </a>
-          </li>
-        </ul>
+      <!-- Conteudo do menu Import -->
+      <div class="col-2 bg-gradient-light text-center rounded collapse navbar-collapse d-md-block" id="menu-le">
+        
       </div>
 
-      <!-- Espaço para os Forms-->
-      <div class="tab-content col-9 col-md-10 container-fluid" id="pills-content">
-        <!--Dados da tela Agendas -->
-        <div class="tab-pane fade" id="tab-agendas" role="tabpanel">
-            <div class="card">
-                <div class="card-header">
-                    <i class="fa fa-calendar  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-                    <span>Agendas</span>
-                </div>
-                <div class="card-body">
-  
-                </div>
-                <div class="card-footer text-right">
-                  
-                </div>
-              </div>
-        </div>
-
-        <!--Dados da tela Messages -->
-        <div class="tab-pane fade" id="tab-messages" role="tabpanel">
-            <div class="card">
-                <div class="card-header">
-                    <i class="fa fa-comments mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-                    <span>Messages</span>
-                </div>
-                <div class="card-body">
-  
-                </div>
-                <div class="card-footer text-right">
-                  
-                </div>
-            </div>
-        </div>
-
-        <!--Dados da tela Dashboard -->
-        <div class="tab-pane fade show active" id="tab-dashboard" role="tabpanel">
-          <div class="card">
-            <div class="card-header">
-                <i class="fa fa-bar-chart mx-1 my-1" style="font-size:24px;" aria-hidden="true"> </i>
-                <span>Dashboard</span>
-            </div>
-            <div class="card-body">
-
-            </div>
-            <div class="card-footer text-right">
-              
-            </div>
-          </div>
-        </div>
-
-        <!--Dados da tela Apps -->
-        <div class="tab-pane fade" id="tab-apps" role="tabpanel">
-            <div class="card">
-              <div class="card-header">
-                <i class="fa fa-microchip  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-                <span>Apps</span>
-              </div>
-              <div class="card-body">
-  
-              </div>
-              <div class="card-footer text-right">
-                
-              </div>
-            </div>
-        </div>
+      <!-- Conteudo do forms Import -->
+      <div class="tab-content col-10 container-fluid" id="pills-content">
         
-        <!--Dados da tela Profiles -->
-        <div class="tab-pane fade" id="tab-profiles" role="tabpanel">
-          <div class="card">
-            <div class="card-header">
-              <i class="fa fa-id-card-o  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span>Profiles</span>
-            </div>
-            <div class="card-body">
-
-            </div>
-            <div class="card-footer text-right">
-              
-            </div>
-          </div>
-        </div>
-
-        <!--Dados da tela Users -->
-        <div class="tab-pane fade" id="tab-users" role="tabpanel">
-          <div class="card">
-              <div class="card-header">
-                <i class="fa fa-users  mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-                <span>Users</span>
-              </div>
-              <div class="card-body">
-  
-              </div>
-              <div class="card-footer text-right">
-                
-              </div>
-            </div>
-        </div>
-
-        <!--Dados da tela Logs -->
-        <div class="tab-pane fade" id="tab-logs" role="tabpanel">
-          <div class="card">
-            <div class="card-header">
-              <i class="fa fa-tasks mx-1 my-1" style="font-size:24px;" aria-hidden="true"></i>
-              <span>Logs</span>
-            </div>
-            <div class="card-body">
-
-            </div>
-            <div class="card-footer text-right">
-              
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
   </main>
   <footer class="container-fluid">
-    <div class="jumbotron jumbotron-fluid rounded">
-      <div class="container-fluid text-center">
-        <h2>Afirma Net</h2>
-        <blockquote class="blockquote text-center">
-            <h4>
-                Missão: <small class="text-muted">Nivelar as inteligências para proporcionar uma melhor qualidade de vida.</small>
-            </h4>
-        </blockquote>
-        <blockquote class="blockquote text-center">
-            <h4>
-                Visão: <small class="text-muted">Olho de tandera, evoluir sempre.</small>
-            </h4>
-        </blockquote>
-        <blockquote class="blockquote text-center">
-            <h4>
-                Valores: <small class="text-muted">Liberdade, Inovação e Divertimento.</small>
-            </h4>
-        </blockquote>
-        <hr class="my-4">
-        <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item">
-            <a class="btn-floating btn-fb mx-1">
-              <i class="fa fa-facebook-official" style="font-size:48px;"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-tw mx-1">
-              <i class="fa fa-twitter" style="font-size:48px;"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-li mx-1">
-              <i class="fa fa-linkedin" style="font-size:48px;"> </i>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <!-- Conteudo do footer Import -->
+    <div class="jumbotron jumbotron-fluid rounded" id="footer-bp">
+
     </div>
   </footer>
   <!-- Optional JavaScript -->
