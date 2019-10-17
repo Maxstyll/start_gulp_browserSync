@@ -8,13 +8,100 @@
             </div>
             <div class="card-body">
                 <div class="container">
-                    <div class="row">
-                        <button onclick="Utils.msgSucessfull('gravado com sucesso')">Sucesso</button>
-                        <button onclick="Utils.msgError('Erro na gravação')">Erro</button>
-                        <button onclick="Utils.msgWarning('Aviso: tem informação na gravado com sucesso')">Aviso</button>
-                    </div>
-                </div>
+                    <div id="filtro-logs" class="border border-light rounded container">
+                        <div id="desc-filtro-logs" class="mt-n3">Filtrar logs</div>
+                        <div class="row mx-1 d-flex justify-content-between">
+                            <div class="column">
+                                <label for="txtOrigin">Origin</label>
+                                <input type="text" class="form-control" id="txtOrigin" aria-describedby="Origin">
+                            </div>
+                            <div class="column">
+                                <label for="txtMethod">Method</label>
+                                <input type="text" class="form-control" id="txtMethod" aria-describedby="Method">
+                            </div>
+                            <div class="column">
+                                <label for="txtStatus">Status</label>
+                                <input type="text" class="form-control" id="txtStatus" aria-describedby="Status">
+                            </div>
+                            <div class="column">
+                                <label for="txtMessage">Message</label>
+                                <input type="text" class="form-control" id="txtMessage" aria-describedby="Message">
+                            </div>
+                        </div>
+                        <div class="row mx-1 d-flex justify-content-between">
+                            <div class="input-group mb-2 mt-2">
+                                <input type="text" class="form-control" placeholder="localize o aplicativo desejado"
+                                    aria-label="localize o aplicativo desejado" aria-describedby="bt-search-apps">
 
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-outline-secondary fa fa-search"
+                                        id="bt-search-apps" aria-hidden="true"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">App</th>
+                                <th scope="col">Origin</th>
+                                <th scope="col">Method</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Message</th>
+                                <th scope="col">Date Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
             <div class="card-footer text-right">
 
