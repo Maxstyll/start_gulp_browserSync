@@ -25,36 +25,83 @@ const Utils = (() => {
     }
 
     const _msgSucessfull = (msg) => {
-        $('#from-message').removeClass('alert-danger')
-        $('#from-message').removeClass('alert-warning')
-        $('#from-message').removeClass('alert-primary')
+        _formatMessage("Sucesso: ", msg)
 
+        $('#from-message').find('#icon').addClass('fa-check')
         $('#from-message').addClass('alert-primary')
         $('#from-message').toast('show')
     }
 
     const _msgError = (msg) => {
-        $('#from-message').removeClass('alert-danger')
-        $('#from-message').removeClass('alert-warning')
-        $('#from-message').removeClass('alert-primary')
+        _formatMessage("Erro: ", msg)
 
+        $('#from-message').find('#icon').addClass('fa-exclamation')
         $('#from-message').addClass('alert-danger')
         $('#from-message').toast('show')
     }
 
     const _msgWarning = (msg) => {
+        _formatMessage("Atenção: ", msg)
+
+        $('#from-message').find('#icon').addClass('fa-exclamation-triangle')
+        $('#from-message').addClass('alert-warning')
+        $('#from-message').toast('show')
+    }
+
+    const _formatMessage = (title, body) => {
         $('#from-message').removeClass('alert-danger')
         $('#from-message').removeClass('alert-warning')
         $('#from-message').removeClass('alert-primary')
 
-        $('#from-message').addClass('alert-warning')
-        $('#from-message').toast('show')
+        $('#from-message').find('#icon').removeClass('fa-check')
+        $('#from-message').find('#icon').removeClass('fa-exclamation-triangle')
+        $('#from-message').find('#icon').removeClass('fa-exclamation')
+
+        $('#from-message').find('#titulo').html(title)
+        $('#from-message').find('#time').html(_formatDateTime(Date.now()))
+        $('#from-message').find('#body').html(body)
+
+    }
+
+    const _formatDate = (date) => {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+   
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+   
+        return [year, month, day].join('-');
+    }
+
+    const _formatDateTime = (date) => {
+        let d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear(),
+            hours = '' + d.getHours(),
+            minutes = '' + d.getMinutes();
+   
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        
+        if (hours.length < 2) hours = '0' + hours;
+        if (minutes.length < 2) minutes = '0' + minutes;
+        
+        let data = [day, month, year].join('/');
+        let horario = [hours, minutes].join(':');
+        let datatime = data + " " + horario;
+
+        return datatime;
     }
 
     return {
         loadFragment: _loadFragment,
         msgSucessfull: _msgSucessfull,
         msgError: _msgError,
-        msgWarning: _msgWarning
+        msgWarning: _msgWarning,
+        formatDate: _formatDate,
+        formatDateTime: _formatDateTime
     }
 })()

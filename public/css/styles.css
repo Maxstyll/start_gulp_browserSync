@@ -1,2 +1,7 @@
 body {
-  background-color: #ffffff; }
+  background-color: #ffffff; 
+}
+
+#from-message {
+  z-index: 999;
+}
