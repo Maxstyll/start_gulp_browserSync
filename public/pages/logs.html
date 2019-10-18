@@ -8,29 +8,32 @@
             </div>
             <div class="card-body">
                 <div class="container">
-                    <div id="filtro-logs" class="border border-light rounded container">
+                    <div id="filtro-logs" class="border border-light rounded container mb-4">
                         <div id="desc-filtro-logs" class="mt-n3">Filtrar logs</div>
                         <div class="row mx-1 d-flex justify-content-between">
                             <div class="column">
                                 <label for="txtOrigin">Origin</label>
-                                <input type="text" class="form-control" id="txtOrigin" aria-describedby="Origin">
+                                <input type="text" class="form-control mt-n2" id="txtOrigin" aria-describedby="Origin">
                             </div>
                             <div class="column">
                                 <label for="txtMethod">Method</label>
-                                <input type="text" class="form-control" id="txtMethod" aria-describedby="Method">
+                                <input type="text" class="form-control mt-n2" id="txtMethod" aria-describedby="Method">
                             </div>
                             <div class="column">
                                 <label for="txtStatus">Status</label>
-                                <input type="text" class="form-control" id="txtStatus" aria-describedby="Status">
+                                <input type="text" class="form-control mt-n2" id="txtStatus" aria-describedby="Status">
                             </div>
                             <div class="column">
                                 <label for="txtMessage">Message</label>
-                                <input type="text" class="form-control" id="txtMessage" aria-describedby="Message">
+                                <input type="text" class="form-control mt-n2" id="txtMessage"
+                                    aria-describedby="Message">
                             </div>
                         </div>
                         <div class="row mx-1 d-flex justify-content-between">
-                            <div class="input-group mb-2 mt-2">
-                                <input type="text" class="form-control" placeholder="localize o aplicativo desejado"
+                            <label for="txtApp" class="mt-1">App</label>
+                            <div class="input-group mb-4 mt-n2">
+                                <input type="text" id="txtApp" class="form-control"
+                                    placeholder="localize o aplicativo desejado"
                                     aria-label="localize o aplicativo desejado" aria-describedby="bt-search-apps">
 
                                 <div class="input-group-prepend">
@@ -80,26 +83,82 @@
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
                         </tbody>
-                        <tfoot>
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </tfoot>
+                        <caption>
+                            <div class="row justify-content-center">
+                                <button aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </button>
+                                <label class="mx-3" id="lblDescPage">1 - 10 de 300</label>
+                                <button aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </button>
+
+                            </div>
+                        </caption>
                     </table>
                 </div>
             </div>
